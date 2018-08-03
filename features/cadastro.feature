@@ -10,31 +10,31 @@ Funcionalidade: Cadastro de usuários
     # Email do usuário
     # Senha do usuário
     # Senha deve ter no mínimo 6 caracteres
-
+    @cadastro
     Cenário: Cadastro simplificado
 
         # BDD
-        Dado que meu nome completo é "Luis Leite"
-        E meu email é "luis@mail.com"
-        E minha senha será "123456"
+        Dado que meu nome completo é "Ninja Validatior Qa"
+        E meu email é "njmotors@mailinator.com"
+        E minha senha será "ninja123456"
         Quando faço meu cadastro
         Então sou autenticado automaticamente
 
     Cenário: Email incorreto
 
-        Dado que meu nome completo é "Luis Leite"
+        Dado que meu nome completo é "Luis Henrique Leite"
         E meu email é incorreto
-        E minha senha será "111111"
+        E minha senha será "123456"
         Quando faço meu cadastro
-        Então devo ver a mensagem "Email incorreto."
+        Então devo ver a mensagem "Email inválido"
 
-    Cenário: Senha com menos de 6 caracteres
+    Cenário: Senha com menos de 5 caracteres
 
-        Dado que meu nome completo é "Luis Leite"
+        Dado que meu nome completo é "Luis Henrique Leite"
         E meu email é válido
-        E minha senha será "12345"
+        E minha senha será "1234"
         Quando faço meu cadastro
-        Então devo ver a mensagem "Senha deve conter no mínimo 6 caracteres."
+        Então devo ver a mensagem "Senha deve conter ao menos 5 caracteres"
 
     Cenário: Nome em branco
 
