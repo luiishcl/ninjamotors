@@ -19,13 +19,11 @@ Dado('meu email é válido') do
 end
 
 Quando('faço meu cadastro') do
-  visit 'https://login.webmotors.com.br/?r=https://www.webmotors.com.br/'
-  find('#btnNovaConta').click
-  find('#nome').set @nome
+  visit 'https://ninjamotors.herokuapp.com/cadastre-se'
+  find('#full-name').set @nome
   find('#email').set @email
-  find('#senha').set @senha
-  find('#btnEntrarNovaConta').click
-  sleep 10
+  find('#password').set @senha
+  find('#do-sign-up').click
 end
 
 Então('sou autenticado automaticamente') do

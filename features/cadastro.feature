@@ -14,9 +14,9 @@ Funcionalidade: Cadastro de usuários
     Cenário: Cadastro simplificado
 
         # BDD
-        Dado que meu nome completo é "Ninja Validatior Qa"
-        E meu email é "njmotors@mailinator.com"
-        E minha senha será "ninja123456"
+        Dado que meu nome completo é "Luis Henrique Leite"
+        E meu email é "luis@me.com"
+        E minha senha será "123456"
         Quando faço meu cadastro
         Então sou autenticado automaticamente
 
